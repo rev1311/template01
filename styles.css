@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+.grid--main-container {
+    background-color: aqua;
+    background-image: url();
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    place-content: center center;
+}
+
+.grid-item {
+    background-color: cadetblue;
+    
+    width: 200px;
+    margin: 20px;
+}
