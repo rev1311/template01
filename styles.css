@@ -12,9 +12,10 @@ body, html {
 .grid--main-container {
     background-color: aqua;
     background-image: url("assets/Empire_mountain_snow_capped_2d_vector_66fdb1cf-7be1-490a-aea3-b03d1949f7db.png");
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+    position: fixed;
 
     display: flex;
     width: 100%;
