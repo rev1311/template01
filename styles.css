@@ -18,10 +18,24 @@ body, html {
     position: fixed;
 
     display: flex;
+    flex-direction: row;
     width: 100%;
     height: 100%;
 
-    place-content: center center;
+    place-content: center right;
+}
+
+.grid--sub-container {
+    background-color: aqua;
+    background-image: url("assets/Empire_mountain_snow_capped_2d_vector_65972541-b129-41c8-a2f8-344cb7be99df.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }
 
 .grid-item {
