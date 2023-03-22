@@ -43,4 +43,14 @@ body, html {
     width: 200px;
     height: 200px;
     margin: 20px;
+
+    transition: 0.3s ease-in-out;
+}
+
+.grid-item:hover {
+    background-color: rgb(151, 245, 248);
+    
+    width: 220px;
+    height: 220px;
+    margin: 15px;
 }
