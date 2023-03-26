@@ -18,15 +18,12 @@ body, html {
     background-image: url("assets/Empire_mountain_snow_capped_2d_vector_66fdb1cf-7be1-490a-aea3-b03d1949f7db.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    position: fixed;
+    background-size: 125%;
 
     display: flex;
     flex-direction: row;
     width: 100vw;
     height: 100vh;
-
-    place-content: center right;
 }
 
 .grid--main2-container {
@@ -37,8 +34,9 @@ body, html {
     background-size: cover;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100vw;
+    height: 100vh;
 }
 
 .grid-item {
