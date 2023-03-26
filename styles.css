@@ -23,7 +23,12 @@ body, html {
     display: flex;
     flex-direction: row;
     position: fixed;
+    top: 0;
     width: 100vw;
+    height: 50vh;
+}
+
+.dummy-container {
     height: 50vh;
 }
 
@@ -37,7 +42,6 @@ body, html {
     display: flex;
     flex-direction: row;
     width: 100vw;
-    margin-top: 50vh;
 }
 
 
