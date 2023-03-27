@@ -13,23 +13,38 @@ body, html {
     height: 100%;
 }
 
+img {
+    src: url();
+    width: 100%;
+    height: auto;
+}
+
+.grid--wrapper {
+    display: flex;
+    flex-direction: column;
+    place-content: flex-start center;
+    position: relative;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
 .grid--main-container {
     background-color: aqua;
     background-image: url("assets/60YR-header.png");
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
-    background-size: 125%;
 
     display: flex;
     flex-direction: row;
-    position: fixed;
+    position: sticky;
     top: 0;
-    width: 100vw;
-    height: 50vh;
+    width: clamp(800px, 100%, 100vw);
+    margin: 0 auto;
 }
 
 .dummy-container {
-    height: 50vh;
+    height: 20vh;
 }
 
 .grid--main2-container {
@@ -61,7 +76,7 @@ body, html {
 
 .grid-item {
     background-color: cadetblue;
-    
+
     width: 200px;
     height: 200px;
     margin: 20px;
@@ -71,6 +86,6 @@ body, html {
 
 .grid-item:hover {
     background-color: rgb(151, 245, 248);
-    
+
     transform: scale(1.25);
 }
