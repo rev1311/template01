@@ -15,7 +15,7 @@ body, html {
 
 .grid--main-container {
     background-color: aqua;
-    background-image: url("assets/Empire_mountain_snow_capped_2d_vector_66fdb1cf-7be1-490a-aea3-b03d1949f7db.png");
+    background-image: url("assets/60YR-header.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 125%;
@@ -34,7 +34,7 @@ body, html {
 
 .grid--main2-container {
     background-color: rgb(76, 121, 121);
-    background-image: url("assets/Empire_mountain_snow_capped_2d_vector_65972541-b129-41c8-a2f8-344cb7be99df.png");
+    background-image: url("assets/IntroParagraph.png");
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -48,7 +48,7 @@ body, html {
 
 .grid--main3-container {
     background-color: aqua;
-    background-image: url("assets/Empire_mountain_snow_capped_2d_vector_66fdb1cf-7be1-490a-aea3-b03d1949f7db.png");
+    background-image: url("assets/60yr-entrepreneurship.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 125%;
