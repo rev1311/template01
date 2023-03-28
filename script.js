@@ -6,7 +6,7 @@ console.log('template scripts')
 scrollLink.addEventListener('click', (e) => {
     e.preventDefault()
 
-    switch(indexOf(blockIndex)) {
+    switch(expression) {
         case x:
             // code block
             break;
