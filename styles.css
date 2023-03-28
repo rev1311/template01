@@ -20,7 +20,7 @@ a {
 }
 
 .grid--wrapper {
-    display: flex;
+    display: block;
     flex-direction: column;
     place-content: flex-start center;
     position: relative;
