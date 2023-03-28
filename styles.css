@@ -34,7 +34,7 @@ a {
 
 .sixt-blox {
     width: clamp(800px, 100%, 99vw);
-    height: auto;
+    height: fit-content;
     margin-bottom: -5px;
     scroll-snap-stop: always;
     scroll-margin: 30vh 0 0 50px;
