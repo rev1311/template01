@@ -13,6 +13,12 @@ body, html {
     height: 100%;
 }
 
+a {
+    position: absolute;
+    right: 80px;
+    bottom: 50px;
+}
+
 img {
     width: 100%;
     height: auto;
@@ -64,16 +70,5 @@ img {
 
 .grid-item {
     background-color: cadetblue;
-
-    width: 200px;
-    height: 200px;
-    margin: 20px;
-
-    transition: 0.3s ease-in-out;
-}
-
-.grid-item:hover {
-    background-color: rgb(151, 245, 248);
-
-    transform: scale(1.25);
+    width: clamp(800px, 100%, 100vw);
 }
