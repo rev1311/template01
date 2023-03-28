@@ -8,11 +8,6 @@
     scroll-behavior: smooth;
 }
 
-body, html {
-    width: 100%;
-    height: 100%;
-}
-
 a {
     position: absolute;
     right: 80px;
@@ -20,7 +15,6 @@ a {
 }
 
 .sixt-blox-img {
-    width: clamp(800px, 100%, 99vw);
     width:100%;
     height: auto;
 }
@@ -32,12 +26,17 @@ a {
     position: relative;
     top: 0;
     width: 100vw;
+    max-width: 100%;
     height: 100vh;
-    overflow-x: hidden;
+}
+
+.sixt-blox {
+    width: clamp(800px, 100%, 99vw);
+    height: auto;
 }
 
 #sixt-blox-header {
-    background-color: aqua;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
