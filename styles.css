@@ -19,7 +19,7 @@ a {
     bottom: 50px;
 }
 
-img.sixt-blox {
+.sixt-blox-img {
     width: clamp(800px, 100%, 99vw);
     width:100%;
     height: auto;
@@ -36,26 +36,12 @@ img.sixt-blox {
     overflow-x: hidden;
 }
 
-.grid--main-container {
+#sixt-blox-header {
     background-color: aqua;
     position: sticky;
     top: 0;
 }
 
-.dummy-container {
+.sixt-blox-dummy {
     height: 20vh;
-}
-
-.grid--main2-container {
-    background-color: rgb(76, 121, 121);
-}
-
-
-.grid--main3-container {
-    background-color: aqua;
-}
-
-.grid-item {
-    background-color: cadetblue;
-    width: clamp(800px, 100%, 100vw);
 }
