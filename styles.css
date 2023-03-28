@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    scroll-snap-type: y mandatory;
+
     scroll-behavior: smooth;
 }
 
@@ -28,6 +28,7 @@ a {
     width: 100vw;
     max-width: 100%;
     min-height: 100vh;
+    scroll-snap-type: y mandatory;
 
 }
 
@@ -36,7 +37,7 @@ a {
     height: auto;
     margin-bottom: -5px;
     scroll-snap-stop: always;
-    scroll-margin: 150px 0 0 50px;
+    scroll-margin: 30vh 0 0 50px;
 }
 
 #sixt-blox-header {
@@ -46,9 +47,5 @@ a {
 }
 
 #sixt-blox-header .sixt-blox-img {
-    height: 20vh;
-}
-
-.sixt-blox-dummy {
-    height: 20vh;
+    height: 30vh;
 }
