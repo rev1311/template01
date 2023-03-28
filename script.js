@@ -6,12 +6,20 @@ console.log('template scripts')
 scrollLink.addEventListener('click', (e) => {
     e.preventDefault()
 
-    let blockIndex = null
-
-    for( let block in bloxList ) {
-
+    for(let blockIndex in bloxList){
+        switch(indexOf(blockIndex)) {
+            case x:
+              // code block
+              break;
+            case y:
+              // code block
+              break;
+            default:
+              // code block
+            }
+        console.log(blockIndex)
     }
 
     console.log(bloxList)
-    console.log(e.target)
+    console.log(e.target.href)
 })
