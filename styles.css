@@ -20,7 +20,8 @@ a {
 }
 
 img.sixt-blox {
-    width: 100%;
+    width: clamp(800px, 100%, 99vw);
+    width:100%;
     height: auto;
 }
 
@@ -32,17 +33,13 @@ img.sixt-blox {
     top: 0;
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .grid--main-container {
     background-color: aqua;
-
-    display: flex;
-    flex-direction: row;
     position: sticky;
     top: 0;
-    width: clamp(800px, 100%, 100vw);
-    margin: 0 auto;
 }
 
 .dummy-container {
@@ -51,21 +48,11 @@ img.sixt-blox {
 
 .grid--main2-container {
     background-color: rgb(76, 121, 121);
-
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height: 50vh;
 }
 
 
 .grid--main3-container {
     background-color: aqua;
-
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height: 50vh;
 }
 
 .grid-item {
