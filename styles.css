@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
+    scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
 
@@ -28,18 +28,25 @@ a {
     width: 100vw;
     max-width: 100%;
     min-height: 100vh;
+
 }
 
 .sixt-blox {
     width: clamp(800px, 100%, 99vw);
     height: auto;
     margin-bottom: -5px;
+    scroll-snap-stop: always;
+    scroll-margin: 150px 0 0 50px;
 }
 
 #sixt-blox-header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+}
+
+#sixt-blox-header .sixt-blox-img {
+    height: 20vh;
 }
 
 .sixt-blox-dummy {
