@@ -4,6 +4,9 @@ scrollLink.addEventListener('click', (e) => {
     let linkId = e.target.href.substr(-1)
 
     switch(linkId) {
+        case '0':
+            scrollLink.setAttribute('href', '#sixt-blox-3')
+            break;
         case '#':
             scrollLink.setAttribute('href', '#sixt-blox-3')
             break;
