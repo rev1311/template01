@@ -4,19 +4,33 @@ const bloxList = Array.from(document.querySelectorAll('.sixt-blox'))
 console.log('template scripts')
 
 scrollLink.addEventListener('click', (e) => {
-    e.preventDefault()
+    let linkId = e.target.href.substr(-1)
 
-    switch(expression) {
-        case x:
-            // code block
+    switch(linkId) {
+        case '#':
+            scrollLink.setAttribute('href', '#sixt-blox-3')
             break;
-        case y:
-            // code block
+        case '3':
+            scrollLink.setAttribute('href', '#sixt-blox-4')
             break;
+        case '4':
+            scrollLink.setAttribute('href', '#sixt-blox-5')
+            break;
+        case '5':
+            scrollLink.setAttribute('href', '#sixt-blox-6')
+            break;
+        case '6':
+            scrollLink.setAttribute('href', '#sixt-blox-7')
+            break;
+        case '7':
+            scrollLink.setAttribute('href', '#sixt-blox-8')
+            break;
+        case '8':
+            scrollLink.setAttribute('href', '#sixt-blox-2')
+            break;
+
         default:
-            // code block
+            scrollLink.setAttribute('href', '#sixt-blox-3')
         }
 
-    console.log(bloxList)
-    console.log(e.target.href)
 })
