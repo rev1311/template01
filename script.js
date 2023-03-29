@@ -29,7 +29,7 @@ scrollLink.addEventListener('click', (e) => {
             scrollLink.setAttribute('href', '#sixt-blox-8')
             break;
         case '8':
-            scrollLink.setAttribute('href', '#sixt-blox-2')
+            scrollLink.setAttribute('href', '#sixt-blox-0')
             break;
 
         default:
