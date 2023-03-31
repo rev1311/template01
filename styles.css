@@ -14,6 +14,10 @@ a {
     bottom: 50px;
 }
 
+.sixt-blox-hidden {
+    display: none;
+}
+
 .sixt-blox-img {
     width:100%;
     height: auto;
