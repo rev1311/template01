@@ -1,9 +1,17 @@
 const scrollLink1 = document.querySelector('#scroll-link1')
 const scrollLink2 = document.querySelector('#scroll-link2')
 
-scrollLink.addEventListener('click', (e) => {
-    let linkId = e.target.href.substr(-1)
+scrollLink1.addEventListener('click', (e) => {
+    let linkId = e.currentTarget.href.substr(-1)
+    switchBoard(linkId)
+})
 
+scrollLink2.addEventListener('click', (e) => {
+    let linkId = e.currentTarget.href.substr(-1)
+    switchBoard(linkId)
+})
+
+function switchBoard(linkId) {
     switch(linkId) {
         case '0':
             scrollLink1.setAttribute('href', '#sixt-blox-2')
@@ -45,6 +53,5 @@ scrollLink.addEventListener('click', (e) => {
         default:
             scrollLink1.setAttribute('href', '#sixt-blox-0')
             scrollLink2.setAttribute('href', '#sixt-blox-0')
-        }
-
-})
+    }
+}
