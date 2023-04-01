@@ -68,6 +68,12 @@ prevBtn.addEventListener('click', () => {
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     slides[currentSlide].classList.add('active');
     slides[currentSlide].classList.remove('next');
+
+    if (currentSlide === 0) {
+        prevBtn.disabled = true;
+    }
+    
+    nextBtn.disabled = false;
 });
 
 nextBtn.addEventListener('click', () => {
@@ -76,4 +82,10 @@ nextBtn.addEventListener('click', () => {
     currentSlide = (currentSlide + 1) % slides.length;
     slides[currentSlide].classList.add('active');
     slides[currentSlide].classList.remove('prev');
+
+    if (currentSlide === slides.length - 1) {
+        nextBtn.disabled = true;
+    }
+    
+    prevBtn.disabled = false;
 });
