@@ -1,5 +1,9 @@
 const scrollLink1 = document.querySelector('#scroll-link1')
 const scrollLink2 = document.querySelector('#scroll-link2')
+const slides = document.querySelectorAll('.sixt-blox-slide');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+let currentSlide = 0;
 
 scrollLink1.addEventListener('click', (e) => {
     let linkId = e.currentTarget.href.substr(-1)
@@ -55,3 +59,17 @@ function switchBoard(linkId) {
             scrollLink2.setAttribute('href', '#sixt-blox-0')
     }
 }
+
+slides[currentSlide].classList.add('active');
+
+prevBtn.addEventListener('click', () => {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+});
+
+nextBtn.addEventListener('click', () => {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+});
