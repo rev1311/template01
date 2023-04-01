@@ -85,11 +85,11 @@
 }
   
 .sixt-blox-slide.prev {
-    left: -100%;
+    left: 100%;
 }
   
 .sixt-blox-slide.next {
-    left: 100%;
+    left: -100%;
 }
   
 .prev-btn,
