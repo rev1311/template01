@@ -64,12 +64,16 @@ slides[currentSlide].classList.add('active');
 
 prevBtn.addEventListener('click', () => {
     slides[currentSlide].classList.remove('active');
+    slides[currentSlide].classList.add('prev');
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     slides[currentSlide].classList.add('active');
+    slides[currentSlide].classList.remove('next');
 });
 
 nextBtn.addEventListener('click', () => {
     slides[currentSlide].classList.remove('active');
+    slides[currentSlide].classList.add('next');
     currentSlide = (currentSlide + 1) % slides.length;
     slides[currentSlide].classList.add('active');
+    slides[currentSlide].classList.remove('prev');
 });
