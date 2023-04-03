@@ -1,11 +1,14 @@
+const sixtBlox = document.querySelector('.sixt-blox')
+const sixtBlox1 = document.querySelector('#sixt-blox-1')
 const scrollLink1 = document.querySelector('#scroll-link1')
 const scrollLink2 = document.querySelector('#scroll-link2')
 const largeHeader = document.querySelector('#largeheader')
 const smallHeader = document.querySelector('#smallheader')
-const slides = document.querySelectorAll('.sixt-blox-slide');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
-let currentSlide = 0;
+const slides = document.querySelectorAll('.sixt-blox-slide')
+const prevBtn = document.querySelector('.prev-btn')
+const nextBtn = document.querySelector('.next-btn')
+let headerHeight = Math.floor(sixtBlox1.getBoundingClientRect().height)
+let currentSlide = 0
 
 scrollLink1.addEventListener('click', (e) => {
     let linkId = e.currentTarget.href.substr(-1)
@@ -62,34 +65,46 @@ function switchBoard(linkId) {
     }
 }
 
+console.log(sixtBlox.style)
+// console.log(sixtBlox.style.scrollMargin = `${headerHeight} 0 0 0`)
+
 function handleHeaderSwitch() {
-    if(document.querySelector('#sixt-blox-1').getBoundingClientRect().top == '0') {
-        requestAnimationFrame(()=>{
-            smallHeader.classList.remove('sixt-blox-hidden')
-            smallHeader.scrollTop = 0
-            largeHeader.style.height = '225px'
-            largeHeader.style.opacity = '0'
-            console.log('animate 1')
-            requestAnimationFrame(()=> {
-                smallHeader.style.opacity = '1'
-                largeHeader.classList.add('sixt-blox-hidden')
-                document.querySelector('#sixt-blox-1').scrollTop = 0
-            })
-        })
+    if(sixtBlox1.getBoundingClientRect().top == '0') {
+        smallHeader.classList.remove('sixt-blox-hidden')
+        smallHeader.style.opacity = '1'
+        largeHeader.classList.add('sixt-blox-hidden')
     } else {
-        requestAnimationFrame(()=>{
-            largeHeader.classList.remove('sixt-blox-hidden')
-            smallHeader.style.opacity = '0'
-            console.log('animate 2')
-            requestAnimationFrame(()=> {
-                largeHeader.style.opacity = '1'
-                smallHeader.classList.add('sixt-blox-hidden')
-            })
-        })
+        largeHeader.classList.remove('sixt-blox-hidden')
+        smallHeader.style.opacity = '0'
+        smallHeader.classList.add('sixt-blox-hidden')
     }
+    //     requestAnimationFrame(()=>{
+    //         smallHeader.classList.remove('sixt-blox-hidden')
+    //         largeHeader.style.height = headerHeight
+    //         console.log(largeHeader)
+    //         requestAnimationFrame(()=> {
+    //             smallHeader.style.opacity = '1'
+    //             largeHeader.style.opacity = '0'
+    //             largeHeader.classList.add('sixt-blox-hidden')
+    //             sixtBlox.style.scrollMargin = `${headerHeight} 0 0 0`
+    //             document.querySelector('#sixt-blox-1').scrollTop = 0
+    //         })
+    //     })
+    // } else {
+    //     requestAnimationFrame(()=>{
+    //         largeHeader.classList.remove('sixt-blox-hidden')
+    //         smallHeader.style.opacity = '0'
+    //         console.log('animate 2')
+    //         requestAnimationFrame(()=> {
+    //             largeHeader.style.opacity = '1'
+    //             smallHeader.classList.add('sixt-blox-hidden')
+    //         })
+    //     })
+    // }
 }
 
 window.onscroll = function() {
+    console.log('scrolling')
     handleHeaderSwitch()
 }
 
