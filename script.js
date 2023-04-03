@@ -1,5 +1,7 @@
 const scrollLink1 = document.querySelector('#scroll-link1')
 const scrollLink2 = document.querySelector('#scroll-link2')
+const largeHeader = document.querySelector('#largeheader')
+const smallHeader = document.querySelector('#smallheader')
 const slides = document.querySelectorAll('.sixt-blox-slide');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
@@ -58,6 +60,36 @@ function switchBoard(linkId) {
             scrollLink1.setAttribute('href', '#sixt-blox-0')
             scrollLink2.setAttribute('href', '#sixt-blox-0')
     }
+}
+
+function handleHeaderSwitch() {    
+    if(document.querySelector('#sixt-blox-1').getBoundingClientRect().top == '0') {
+        requestAnimationFrame(()=>{
+            smallHeader.classList.remove('sixt-blox-hidden')
+            smallHeader.scrollTop = 0
+            largeHeader.style.height = '225px'
+            largeHeader.style.opacity = '0'
+            console.log('animate 1')
+            requestAnimationFrame(()=> {
+                smallHeader.style.opacity = '1'
+                largeHeader.classList.add('sixt-blox-hidden')
+            })
+        })          
+    } else {
+        requestAnimationFrame(()=>{
+            largeHeader.classList.remove('sixt-blox-hidden')
+            smallHeader.style.opacity = '0'
+            console.log('animate 2')
+            requestAnimationFrame(()=> {
+                largeHeader.style.opacity = '1'
+                smallHeader.classList.add('sixt-blox-hidden')
+            })
+        })
+    }
+}
+
+window.onscroll = function() {
+    handleHeaderSwitch()
 }
 
 slides[currentSlide].classList.add('active');
