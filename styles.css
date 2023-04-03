@@ -84,7 +84,7 @@
     height: 300px;
     overflow: hidden;
   }
-  
+
 .sixt-blox-slide {
     position: absolute;
     top: 0;
@@ -92,22 +92,22 @@
     height: 100%;
     opacity: 0;
     left: 0;
-    transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
-  
+
 .sixt-blox-slide.active {
     opacity: 1;
     left: 0;
 }
-  
+
 .sixt-blox-slide.prev {
     left: 100%;
 }
-  
+
 .sixt-blox-slide.next {
     left: -100%;
 }
-  
+
 .prev-btn,
 .next-btn {
     position: absolute;
@@ -120,11 +120,11 @@
     border: none;
     cursor: pointer;
 }
-  
+
 .prev-btn {
     left: 10px;
 }
-  
+
 .next-btn {
     right: 10px;
 }
