@@ -26,6 +26,7 @@
     height: fit-content;
     margin: -5px 0;
     scroll-snap-stop: always;
+    scroll-snap-align: start;
     scroll-margin: 225px 0 0 0;
 }
 
