@@ -46,6 +46,13 @@
     z-index: 20;
 }
 
+#smallheader {
+    opacity: 0;
+}
+#largeheader {
+    opacity: 1;
+}
+
 #sb-arr-wrapper {
     width: 100%;
     height: 1px;
