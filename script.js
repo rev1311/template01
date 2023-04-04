@@ -33,28 +33,19 @@ function switchBoard(linkId) {
     }
 }
 
-console.log(sixtBlox.style)
-// console.log(sixtBlox.style.scrollMargin = `${headerHeight} 0 0 0`)
-
 function handleHeaderSwitch() {
     if(sixtBlox1.getBoundingClientRect().top == '0') {
-    //     smallHeader.classList.remove('sixt-blox-hidden')
-    //     smallHeader.style.opacity = '1'
-    //     largeHeader.classList.add('sixt-blox-hidden')
-    // } else {
-    //     largeHeader.classList.remove('sixt-blox-hidden')
-    //     smallHeader.style.opacity = '0'
-    //     smallHeader.classList.add('sixt-blox-hidden')
-    // }
         requestAnimationFrame(()=>{
-            sixtBlox.style.scrollMargin = `${headerHeight} 0 0 0`
+            sixtBlox.forEach( blox => blox.style.scrollMargin = `${headerHeight} 0 0 0`)
             largeHeader.style.height = headerHeight
             smallHeader.classList.remove('sixt-blox-hidden')
             largeHeader.style.opacity = '0'
-            document.querySelector('#sixt-blox-1').scrollTop = 0
             requestAnimationFrame(()=> {
                 smallHeader.style.opacity = '1'
                 largeHeader.classList.add('sixt-blox-hidden')
+                // setTimeout(function () {
+                //     smallHeader.scrollIntoView(true);
+                //   }, 150);
             })
         })
     // } else {
