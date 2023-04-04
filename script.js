@@ -10,15 +10,15 @@ const nextBtn = document.querySelector('.next-btn')
 let headerHeight = Math.floor(sixtBlox1.getBoundingClientRect().height)
 let currentSlide = 0
 
-// scrollLink1.addEventListener('click', (e) => {
-//     let linkId = e.currentTarget.href.substr(-1)
-//     switchBoard(linkId)
-// })
+scrollLink1.addEventListener('click', (e) => {
+    let linkId = e.currentTarget.href.substr(-1)
+    switchBoard(linkId)
+})
 
-// scrollLink2.addEventListener('click', (e) => {
-//     let linkId = e.currentTarget.href.substr(-1)
-//     switchBoard(linkId)
-// })
+scrollLink2.addEventListener('click', (e) => {
+    let linkId = e.currentTarget.href.substr(-1)
+    switchBoard(linkId)
+})
 
 function switchBoard(linkId) {
     if(linkId == '0' || linkId == '#'){
@@ -33,14 +33,15 @@ function switchBoard(linkId) {
     }
 }
 
-function handleHeaderSwitch() {
+function handleHeaderSwitch(linkId) {
     if(sixtBlox1.getBoundingClientRect().top == '0') {
-        requestAnimationFrame(()=>{
-            sixtBlox.forEach( blox => blox.style.scrollMargin = `${headerHeight} 0 0 0`)
+        requestAnimationFrame(()=> {
+            console.log('reqAni1',sixtBlox[linkId])
             largeHeader.style.height = headerHeight
             smallHeader.classList.remove('sixt-blox-hidden')
             largeHeader.style.opacity = '0'
             requestAnimationFrame(()=> {
+                console.log('reqAni2',sixtBlox[linkId])
                 smallHeader.style.opacity = '1'
                 largeHeader.classList.add('sixt-blox-hidden')
                 // setTimeout(function () {
