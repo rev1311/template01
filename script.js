@@ -1,4 +1,4 @@
-const sixtBlox = document.querySelector('.sixt-blox')
+const sixtBlox = document.querySelectorAll('.sixt-blox')
 const sixtBlox1 = document.querySelector('#sixt-blox-1')
 const scrollLink1 = document.querySelector('#scroll-link1')
 const scrollLink2 = document.querySelector('#scroll-link2')
@@ -38,26 +38,25 @@ console.log(sixtBlox.style)
 
 function handleHeaderSwitch() {
     if(sixtBlox1.getBoundingClientRect().top == '0') {
-        smallHeader.classList.remove('sixt-blox-hidden')
-        smallHeader.style.opacity = '1'
-        largeHeader.classList.add('sixt-blox-hidden')
-    } else {
-        largeHeader.classList.remove('sixt-blox-hidden')
-        smallHeader.style.opacity = '0'
-        smallHeader.classList.add('sixt-blox-hidden')
-    }
-    //     requestAnimationFrame(()=>{
-    //         smallHeader.classList.remove('sixt-blox-hidden')
-    //         largeHeader.style.height = headerHeight
-    //         console.log(largeHeader)
-    //         requestAnimationFrame(()=> {
-    //             smallHeader.style.opacity = '1'
-    //             largeHeader.style.opacity = '0'
-    //             largeHeader.classList.add('sixt-blox-hidden')
-    //             sixtBlox.style.scrollMargin = `${headerHeight} 0 0 0`
-    //             document.querySelector('#sixt-blox-1').scrollTop = 0
-    //         })
-    //     })
+    //     smallHeader.classList.remove('sixt-blox-hidden')
+    //     smallHeader.style.opacity = '1'
+    //     largeHeader.classList.add('sixt-blox-hidden')
+    // } else {
+    //     largeHeader.classList.remove('sixt-blox-hidden')
+    //     smallHeader.style.opacity = '0'
+    //     smallHeader.classList.add('sixt-blox-hidden')
+    // }
+        requestAnimationFrame(()=>{
+            sixtBlox.style.scrollMargin = `${headerHeight} 0 0 0`
+            largeHeader.style.height = headerHeight
+            smallHeader.classList.remove('sixt-blox-hidden')
+            largeHeader.style.opacity = '0'
+            document.querySelector('#sixt-blox-1').scrollTop = 0
+            requestAnimationFrame(()=> {
+                smallHeader.style.opacity = '1'
+                largeHeader.classList.add('sixt-blox-hidden')
+            })
+        })
     // } else {
     //     requestAnimationFrame(()=>{
     //         largeHeader.classList.remove('sixt-blox-hidden')
@@ -68,13 +67,13 @@ function handleHeaderSwitch() {
     //             smallHeader.classList.add('sixt-blox-hidden')
     //         })
     //     })
-    // }
+    }
 }
 
-// window.onscroll = function() {
-//     console.log('scrolling')
-//     handleHeaderSwitch()
-// }
+window.onscroll = function() {
+    console.log('scrolling')
+    handleHeaderSwitch()
+}
 
 slides[currentSlide].classList.add('active');
 
