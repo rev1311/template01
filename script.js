@@ -10,15 +10,15 @@ const nextBtn = document.querySelector('.next-btn')
 let headerHeight = Math.floor(sixtBlox1.getBoundingClientRect().height)
 let currentSlide = 0
 
-scrollLink1.addEventListener('click', (e) => {
-    let linkId = e.currentTarget.href.substr(-1)
-    switchBoard(linkId)
-})
+// scrollLink1.addEventListener('click', (e) => {
+//     let linkId = e.currentTarget.href.substr(-1)
+//     switchBoard(linkId)
+// })
 
-scrollLink2.addEventListener('click', (e) => {
-    let linkId = e.currentTarget.href.substr(-1)
-    switchBoard(linkId)
-})
+// scrollLink2.addEventListener('click', (e) => {
+//     let linkId = e.currentTarget.href.substr(-1)
+//     switchBoard(linkId)
+// })
 
 function switchBoard(linkId) {
     if(linkId == '0' || linkId == '#'){
@@ -71,10 +71,10 @@ function handleHeaderSwitch() {
     // }
 }
 
-window.onscroll = function() {
-    console.log('scrolling')
-    handleHeaderSwitch()
-}
+// window.onscroll = function() {
+//     console.log('scrolling')
+//     handleHeaderSwitch()
+// }
 
 slides[currentSlide].classList.add('active');
 
