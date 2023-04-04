@@ -43,23 +43,24 @@ function handleHeaderSwitch(linkId) {
             largeHeader.style.opacity = 0
             requestAnimationFrame(()=> {
                 console.log('reqAni2',sixtBlox[4])
-                smallHeader.style.opacity = 1
                 largeHeader.classList.add('sixt-blox-hidden')
+                smallHeader.style.opacity = 1
                 setTimeout(function () {
                     smallHeader.scrollIntoView(true);
                   }, 150);
             })
         })
-    // } else {
-    //     requestAnimationFrame(()=>{
-    //         largeHeader.classList.remove('sixt-blox-hidden')
-    //         smallHeader.style.opacity = '0'
-    //         console.log('animate 2')
-    //         requestAnimationFrame(()=> {
-    //             largeHeader.style.opacity = '1'
-    //             smallHeader.classList.add('sixt-blox-hidden')
-    //         })
-    //     })
+    } else {
+        requestAnimationFrame(()=>{
+            largeHeader.classList.remove('sixt-blox-hidden')
+            smallHeader.style.opacity = '0'
+            console.log('animate 2')
+            requestAnimationFrame(()=> {
+                    largeHeader.style.opacity = '1'
+                    smallHeader.classList.add('sixt-blox-hidden')
+                console.log('animate 3')
+            })
+        })
     }
 }
 
