@@ -12,12 +12,12 @@ let currentSlide = 0
 let linkId = 0
 
 scrollLink1.addEventListener('click', (e) => {
-    linkId = parseInt(e.currentTarget.href.substr(-1))
+    linkId = e.currentTarget.href.substr(-1)
     switchBoard(linkId)
 })
 
 scrollLink2.addEventListener('click', (e) => {
-    linkId = parseInt(e.currentTarget.href.substr(-1))
+    linkId = e.currentTarget.href.substr(-1)
     switchBoard(linkId)
 })
 
