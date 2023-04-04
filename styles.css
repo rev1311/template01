@@ -17,7 +17,7 @@
     width: 100vw;
     max-width: 100%;
     min-height: 100vh;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
 
 }
 
@@ -25,13 +25,12 @@
     width: clamp(800px, 100%, 99vw);
     height: fit-content;
     margin: -5px 0;
-    scroll-snap-stop: always;
     scroll-snap-align: start;
-    scroll-margin: 225px 0 0 0;
+    scroll-margin: 125px 0 0 0;
 }
 
 .sixt-blox-img {
-    width:100%;
+    width: 100%;
     height: auto;
 }
 
