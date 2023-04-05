@@ -52,6 +52,13 @@
     opacity: 0;
     transition: all 0.3s;
 }
+#smallheaderlogo {
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: all 0.3s;
+}
 #largeheader {
     opacity: 1;
     transition: all 0.3s;
