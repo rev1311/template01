@@ -2,6 +2,7 @@ const sixtBlox = Array.from(document.querySelectorAll('.sixt-blox'))
 const sixtBlox1 = document.querySelector('#sixt-blox-1')
 const largeHeader = document.querySelector('#largeheader')
 const smallHeader = document.querySelector('#smallheader')
+const smallHeaderLogo = document.querySelector('#smallheaderlogo')
 const slides = document.querySelectorAll('.sixt-blox-slide')
 const prevBtn = document.querySelector('.prev-btn')
 const nextBtn = document.querySelector('.next-btn')
@@ -24,6 +25,7 @@ function handleHeaderSwitch(linkId) {
                 // console.log('reqAni2',sixtBlox[4])
                 largeHeader.classList.add('sixt-blox-hidden')
                 smallHeader.style.opacity = 1
+                smallHeaderLogo.style.opacity = 1
                 setTimeout(function () {
                     smallHeader.scrollIntoView(true);
                   }, 150);
