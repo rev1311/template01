@@ -43,11 +43,6 @@ function handleHeaderSwitch(linkId) {
     }
 }
 
-// window.onscroll = function() {
-//     console.log('scrolling')
-//     handleHeaderSwitch()
-// }
-
 slides[currentSlide].classList.add('active');
 
 prevBtn.addEventListener('click', () => {
