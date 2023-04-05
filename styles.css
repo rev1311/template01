@@ -39,6 +39,7 @@
 }
 
 #sixt-blox-1 {
+    display: flex;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -46,6 +47,7 @@
     z-index: 20;
     background-color: #666;
     height: fit-content;
+    align-content: start;
 }
 
 #smallheader {
