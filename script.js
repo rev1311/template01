@@ -1,6 +1,7 @@
 const sixtBlox = Array.from(document.querySelectorAll('.sixt-blox'))
 const sixtBlox1 = document.querySelector('#sixt-blox-1')
 const largeHeader = document.querySelector('#largeheader')
+const largeHeaderLogo = document.querySelector('#largeheaderlogo')
 const smallHeader = document.querySelector('#smallheader')
 const smallHeaderLogo = document.querySelector('#smallheaderlogo')
 const slides = document.querySelectorAll('.sixt-blox-slide')
@@ -11,35 +12,41 @@ let currentSlide = 0
 
 window.addEventListener('scroll', () => {
     console.log('scrolled')
-    if(sixtBlox1.getBoundingClientRect().top == 0) handleHeaderSwitch()
+    handleHeaderSwitchSmall()
+    handleHeaderSwitchLarge()
 })
 
-function handleHeaderSwitch(linkId) {
+function handleHeaderSwitchSmall() {
     if(sixtBlox1.getBoundingClientRect().top == 0) {
         requestAnimationFrame(()=> {
-            // console.log('reqAni1',sixtBlox, linkId)
-            largeHeader.style.height = headerHeight
             smallHeader.classList.remove('sixt-blox-hidden')
+            largeHeader.style.height = headerHeight
             largeHeader.style.opacity = 0
+            largeHeaderLogo.style.opacity = 0
             requestAnimationFrame(()=> {
-                // console.log('reqAni2',sixtBlox[4])
                 largeHeader.classList.add('sixt-blox-hidden')
-                smallHeader.style.opacity = 1
                 smallHeaderLogo.style.opacity = 1
+                smallHeader.style.opacity = 1
                 setTimeout(function () {
                     smallHeader.scrollIntoView(true);
                   }, 150);
             })
         })
-    } else {
+    } 
+}
+
+function handleHeaderSwitchLarge() {
+    if(sixtBlox1.getBoundingClientRect().top > 30 && largeHeader.getAttribute('class', 'sixt-blox-hidden')) {
         requestAnimationFrame(()=>{
             largeHeader.classList.remove('sixt-blox-hidden')
+            largeHeaderLogo.classList.remove('sixt-blox-hidden')
             smallHeader.style.opacity = '0'
-            // console.log('animate 2')
+            smallHeaderLogo.style.opacity = '0'
             requestAnimationFrame(()=> {
-                    largeHeader.style.opacity = '1'
-                    smallHeader.classList.add('sixt-blox-hidden')
-                // console.log('animate 3')
+                largeHeader.style.opacity = '1'
+                largeHeaderLogo.style.opacity = '1'
+                smallHeader.classList.add('sixt-blox-hidden')
+                smallHeaderLogo.classList.add('sixt-blox-hidden')
             })
         })
     }
