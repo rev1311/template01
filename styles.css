@@ -70,7 +70,6 @@
     position: absolute;
     left: 0;
     top: 0;
-    transform: translate(0, 50%);
     transition: all 0.3s;
     z-index: 25;
 }
