@@ -1,54 +1,31 @@
 const sixtBlox = Array.from(document.querySelectorAll('.sixt-blox'))
+const sixtBlox0 = document.querySelector('#sixt-blox-0')
 const sixtBlox1 = document.querySelector('#sixt-blox-1')
-const largeHeader = document.querySelector('#largeheader')
-const largeHeaderLogo = document.querySelector('#largeheaderlogo')
-const smallHeader = document.querySelector('#smallheader')
-const smallHeaderLogo = document.querySelector('#smallheaderlogo')
+const sixtBlox2 = document.querySelector('#sixt-blox-2')
+const largeHeaderWrapper = document.querySelector('#largeheaderwrapper')
+const smallHeaderWrapper = document.querySelector('#smallheaderwrapper')
 const slides = document.querySelectorAll('.sixt-blox-slide')
 const prevBtn = document.querySelector('.prev-btn')
 const nextBtn = document.querySelector('.next-btn')
-let headerHeight = Math.floor(sixtBlox1.getBoundingClientRect().height)
+let headerHeight = Math.floor(smallHeaderWrapper.getBoundingClientRect().height)
 let currentSlide = 0
 
 window.addEventListener('scroll', () => {
     console.log('scrolled')
-    handleHeaderSwitchSmall()
-    handleHeaderSwitchLarge()
+    handleHeaderSwitch()
 })
 
-function handleHeaderSwitchSmall() {
+function handleHeaderSwitch() {
     if(sixtBlox1.getBoundingClientRect().top == 0) {
-        requestAnimationFrame(()=> {
-            smallHeader.classList.remove('sixt-blox-hidden')
-            largeHeader.style.height = headerHeight
-            largeHeader.style.opacity = 0
-            largeHeaderLogo.style.opacity = 0
-            requestAnimationFrame(()=> {
-                largeHeader.classList.add('sixt-blox-hidden')
-                smallHeaderLogo.style.opacity = 1
-                smallHeader.style.opacity = 1
-                setTimeout(function () {
-                    smallHeader.scrollIntoView(true);
-                  }, 150);
-            })
-        })
-    } 
-}
-
-function handleHeaderSwitchLarge() {
-    if(sixtBlox1.getBoundingClientRect().top > 30 && largeHeader.getAttribute('class', 'sixt-blox-hidden')) {
-        requestAnimationFrame(()=>{
-            largeHeader.classList.remove('sixt-blox-hidden')
-            largeHeaderLogo.classList.remove('sixt-blox-hidden')
-            smallHeader.style.opacity = '0'
-            smallHeaderLogo.style.opacity = '0'
-            requestAnimationFrame(()=> {
-                largeHeader.style.opacity = '1'
-                largeHeaderLogo.style.opacity = '1'
-                smallHeader.classList.add('sixt-blox-hidden')
-                smallHeaderLogo.classList.add('sixt-blox-hidden')
-            })
-        })
+        console.log(headerHeight)
+        largeHeaderWrapper.style.opacity = 0
+        largeHeaderWrapper.style.height = headerHeight
+        console.log(headerHeight)
+        smallHeaderWrapper.style.opacity = 1
+        smallHeaderWrapper.setAttribute('position', 'relative')
+    } else {
+        smallHeaderWrapper.style.opacity = 0
+        largeHeaderWrapper.style.opacity = 1
     }
 }
 
