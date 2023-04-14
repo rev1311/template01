@@ -15,6 +15,7 @@ window.addEventListener('scroll', () => {
     handleHeaderSwitch()
 })
 
+// this isnt working as intended...
 function handleHeaderSwitch() {
     if(sixtBlox1.getBoundingClientRect().top == 0) {
         console.log(headerHeight)
